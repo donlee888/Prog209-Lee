@@ -1,0 +1,156 @@
+<!doctype html> 
+
+
+/* Black: #000000
+White: #FFFFFF
+Red: #FF0000
+Blue: #0000FF
+Green: #00FF00
+Yellow: #FFFF00
+Orange: #FF9900
+Violet: #CC33FF
+
+Hex colors are not the only color system you can use. You can optionally use the RGB/RGBA or HSL/HSLA color systems. They all produce the same colors, but they describe them in different ways.
+The RGB system uses three numbers that describe the relative amounts of red, green, and blue that are mixed together to produce any color. The numbers can be from 0 to 255. Here's the RGB color code for a dark violet: rgb(204, 51, 255)
+You could apply this to a CSS property, like a font color, like this:
+
+color: rgb(205, 51, 255);
+The RGBA system adds one more number that describes how transparent a color is. 0 means that the color is completely transparent, and 1 means that it's completely opaque (solid). A value of 0.5 makes the color semitransparent. Here's a semitransparent RGBA version of dark violet.
+
+rgba(204, 51, 255, 0.5)
+
+*/
+
+<title>Background images</title>
+
+<style>
+
+body, h1 , div {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 15px;
+}
+
+#box {
+	width: 800px;
+	height: 800px;
+	background-color: #FFFFFF;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#top {
+	width: 700px;
+	height: 60px;
+	background-color: #87B47E;
+	clear: both;
+	text-align: center;
+}
+
+
+#map {
+	width: 500px;
+	height: 500px;
+    background-image: url("../img/map.jpg");
+	float: left;
+}
+
+#column{
+	width: 200px;
+	height: 500px;
+	background-color: pink;
+	float: left;
+	text-align: center;
+}
+
+#sprite {
+	position: absolute;
+	top: 245px;
+	left: 205px;
+}
+
+#bottom {
+	width: 700px;
+	height: 50px;
+	background-color: tan;
+	clear: both;
+	text-align: center;
+}
+
+h1
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 30px;
+
+}
+
+h2
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+h3
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+p, li
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+em
+{
+  text-decoration: underline;
+  font-style: normal;
+}
+
+strong
+{
+  font-weight: bold;
+  color: red;
+}
+
+li
+{
+  list-style-type: square;
+}
+
+a
+{
+  color: green;
+  text-decoration: none;
+}
+
+a:hover
+{
+  background-color: black;
+  color: white;
+}
+
+/* img
+{
+  width: 250px;
+  height: auto;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: navy;
+  padding: 10px;
+}
+
+*/
+
