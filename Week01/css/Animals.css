@@ -1,0 +1,18 @@
+body {
+
+#cat
+{
+  font-style: italic;
+}
+
+#tiger
+{
+  font-weight: bold;
+}
+
+#hedgehog
+{
+  text-decoration: underline;
+}
+
+}
