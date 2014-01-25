@@ -1,51 +1,131 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Prog 209 Assignment 02 by Donald Lee -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0 Transitional//EN" "http://www.w3.org/TR/html5/loose.dtd">
 
 <html lang="en">
-	
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<meta charset="utf-8" />
-		<title>Week 1 Assignment: Grand Hawaiian Tour</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Week 2 Assignment: CSS Color Displayer</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />		
-	
+		<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
 
-		
 	</head>
 
 
-<body>
-	   <div id="box">
+
+	<body>
+		<script src="src\index.js"></script>
+		
+		
+		<div id="container">
+					<h2><em>CSS Color Displayer</em></h2>
+
+			<h3><em>Select a number from 0 to 255 for each color value:</em></h3>
+
 	
-			<div id="top">
-				<h1>Grand Hawaiian Tour</h1>
-			</div>
+	  <div id="red">
+	  	<h2>Red:</h2>
+		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
+	 </div>
+	
+	  <div id="green">
+	  	<h2>Green:</h2>
+		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
 		
-		
-			<div id="map"></div>
-								
-			<div id="column">
-				<h3>Column 'o buttons</h3>
-				This is an awesome game!
-				<p>
-					<button type="button">Click to play</button>
-					<button type="button">Toss in the towel</button>
-				</p>
-			</div>
+	 </div>	
+	 
+	 <div id="blue">
+	 	<h2>Blue:</h2>
+		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
 
+	 </div>
+	 
+	 	<button id="show">Show me the color!</button>
+	 	
+		<button id="clear">Clear all</button>
+		
+		<div id="colorBar"></div>
+		
+		
 			
-			<div id="bottom"><h3>Copyright © BC Game Demons</h3></div>
-		
-	    </div>
-	    
-	    <img id="sprite" src="img/sprite.png">
-	    
-</body>
-</html> 
+		</div>
 
-	</body>
+</body>
+</html>
+
+<!--		<div id="canvas"></div>
+
+
+			<div id="Red">
+				<form action="">
+
+					<input id="input" type="text" placeholder="Enter some text...">
+					<button>
+						enter
+					</button>
+					<p id="output"></p>
+
+					<br>
+				</form>
+
+			</div>
+
+			<div id="Green">
+
+				<form action="">
+
+					<input name="red" type="number" name="Red">
+					<input type="button">
+					<br>
+				</form>
+
+			</div>
+
+			<div id="Blue">
+				<form action="">
+
+					<input name="red" type="number" name="Red">
+					<input type="submit" id="submit" value="Submit">
+					<input type="reset" id="reset" value="Reset Fields"<br>
+					<br>
+					</form>
+
+			</div>
+
+
+			<div id="colorBar"></div>
+
+		</section>
+
+		<div id="footer">
+	
+			<h3>Copyright © Donald Lee</h3>
+		</div>
+
+--!>
+
+
+	
+
+	<script>
+		var button = document.querySelector("button");
+		button.addEventListener("click", clickHandler, false);
+		button.style.cursor = "pointer";
+
+		function clickHandler() {
+			var input = document.querySelector("#input");
+			var output = document.querySelector("#output");
+			output.innerHTML = input.value;
+		}
+
+	</script>
+
+
+</body>
 </html>
