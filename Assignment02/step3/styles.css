@@ -1,0 +1,39 @@
+html, body, div {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+#container {
+	margin: 25px auto;
+	background-color: OldLace ;
+	border: 1px solid Silver;
+	width: 440px;
+	height: 250px;
+	padding: 10px 30px;
+}
+.colorBox {
+	width: 80px;
+	height:60px;
+	border: 1px solid LightGray;
+	float:left;
+	margin-right: 15px;
+	text-align: center;
+}
+#colorBar {
+	width: 400px;
+	height: 50px;
+	background-color: OldLace;
+	margin-top: 20px;
+	border: 1px solid LightGray;
+}
+
+button {
+	margin-bottom: 4px;
+}
+input {
+	text-align: right;
+}
