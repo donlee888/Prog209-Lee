@@ -15,73 +15,190 @@
 
 		<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
 
+		<style type="text/css">
+			background {
+				color: #000;
+			}
+
+			body {
+				margin: 50px;
+				font-family: Verdana, Helvetica, sans-serif;
+				background: #fff;
+				color: #000;
+			}
+
+			#frame0 {
+				/*				position: absolute; */
+				float: top;
+				top: 100px;
+				left: 100px;
+				width: 450px;
+				height: 100px;
+				margin: 50px;
+				text-align: center;
+				background-color: blue;
+				border: 10px dotted red;	/* NOTE that this border surrounds the frame area */
+			
+			}
+
+			#frame1 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 600px;
+				left: 100px;
+				width: 450px;
+				height: 400px;
+				margin: 50px;
+				text-align: center;
+				background-color: purple;
+				border: 10px double orange;	/* NOTE that this border surrounds the frame area */
+.			}
+
+			#frame2 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 1000px;
+				left: 10px;
+				width: 450px;
+				height: 400px;
+				margin: 50px;
+				text-align: center;
+				background-color: red;
+				border: 10px dashed green;	/* NOTE that this border surrounds the frame area */
+.
+			}
+
+			#frame3 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 1000px;
+				left: 10px;
+				width: 450px;
+				height: 330px;
+				margin: 50px;
+				text-align: center;
+				border: 10px double blue;	/* NOTE that this border surrounds the frame area */
+				background-color: gray;
+			}
+
+		</style>
+
 	</head>
-	
-<body>
-<audio controls="controls" autoplay="autoplay" loop>
-<source src="allegro.mp3" type="audio/mp3" />
-If you are reading this then your browser does not support the HTML5 audio element.
-</audio>
+	<!-- <body bgcolor="#E6E6FA"> !-->
+	<body style="background-color:yellow;">
 
-<br /><br />
+		<br />
+		<br />
 
+		<!-- <audio controls="controls" autoplay="autoplay" loop> !-->
 
-<video controls autoplay>
-<source src="57superbowl.mp4" type="video/mp4" />
+		<h1>Prog 209 - Assignment 3</h1>
+		<p>
 
-<iframe src="https://player.vimeo.com/video/3061178" width="80%" height=300" style="display:block: margin-left: auto: margin-right: auto;"></iframe></p>
+			<div id="frame0">
+				<h3>allegro.mp3</h3>
+				<audio controls="controls" loop="loop" poster="Images\Image500X500A.png">
 
-If you are reading this then your browser does not support the HTML5 video element.
-</video>
-<p>&nbsp;</p>
-<table width="607" height="224" border="1">
-     <thead>
-          <tr>
-               <th bgcolor="#FFCC66">Codecs/container</th>
-               <th bgcolor="#FFCC66" title="Internet Explorer">IE</th>
-               <th bgcolor="#FFCC66" title="Mozilla Firefox">Firefox</th>
-               <th bgcolor="#FFCC66" title="Apple Safari">Safari</th>
-               <th bgcolor="#FFCC66" title="Google Chrome">Chrome</th>
-               <th bgcolor="#FFCC66">Opera</th>
-               <th bgcolor="#FFCC66">iPhone</th>
-               <th bgcolor="#FFCC66">Android </th>
-          </tr>
-     </thead>
-     <tbody>
-          <tr>
-               <th>Theora+Vorbis+Ogg</th>
-               <td>&nbsp;</td>
-               <td>3.5+</td>
-               <td>&nbsp;</td>
-               <td>5.0+</td>
-               <td>10.5+</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-          </tr>
-          <tr>
-               <th>H.264+AAC+MP4</th>
-               <td>9.0+</td>
-               <td>&nbsp;</td>
-               <td>3.0+</td>
-               <td>5.0+</td>
-               <td>&nbsp;</td>
-               <td>3.0+</td>
-               <td>2.0+ </td>
-          </tr>
-          <tr>
-               <th>WebM</th>
-               <td>9.0+*</td>
-               <td>4.0+</td>
-               <td>&nbsp;</td>
-               <td>6.0+</td>
-               <td>10.6+</td>
-               <td>&nbsp;</td>
-               <td>2.3+ </td>
-          </tr>
-     </tbody>
-</table>
-<p>&nbsp;</p>
-</body>
+					<source src="HTML5 Video\allegro.mp3" type="audio/mp3" />
 
+					If you are reading this then your browser does not support the HTML5 audio element. Demo audio will play.
+				</audio>
+				<br />
+				<br />
+			</div>
+
+			<!-- <video controls autoplay> </video> !-->
+
+			<div id="frame1">
+				<div id="videoDiv">
+					<h3>demoTest.mp4</h3>
+					<video controls  width="430" height="300" poster="Images\Tom_and_Jerry_Jolly_Fish_1932.gif">
+						<source src="HTML5 Video\Tom_and_Jerry_Jolly_Fish_1932.ogv"  type="video/mp4" alt="Tom and Jerry Jolly Fish 1932">
+						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+						<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+
+					</video>
+				</div>
+			</div>
+
+		<p></p>
+		<p></p>
+
+		<div id="frame2">
+			<div id="videoDiv">
+				<h3>57SuperBowl.mp4</h3>
+				<video controls  width="430" height="300" poster="Images\Image500X500C.png">
+					<source src="HTML5 Video\57superbowl.mp4">
+												If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+						<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+
+				</video>
+			</div>
+		</div>
+		<p><p></p>
+		</p>
+		<h3>History of the Internet</h3>
+
+<!-- <div id=frame3></div> !-->
+
+<iframe src="https://player.vimeo.com/video/3061178" width="80%" height="300" style="display:block: border: double blue: auto: margin-right: auto;"></iframe></p>
+						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+						<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+<p></p>
+
+		<p>
+		&nbsp;
+		</p>
+			<h3>Media Type and Browser Version Compatibility Table</h3>
+		<table width="607" height="224" border="1">
+		<thead>
+		<tr>
+		<th bgcolor="#FFCC66">Codecs/container</th>
+		<th bgcolor="#FFCC66" title="Internet Explorer">IE</th>
+		<th bgcolor="#FFCC66" title="Mozilla Firefox">Firefox</th>
+		<th bgcolor="#FFCC66" title="Apple Safari">Safari</th>
+		<th bgcolor="#FFCC66" title="Google Chrome">Chrome</th>
+		<th bgcolor="#FFCC66">Opera</th>
+		<th bgcolor="#FFCC66">iPhone</th>
+		<th bgcolor="#FFCC66">Android </th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Theora+Vorbis+Ogg</th>
+				<td>&nbsp;</td>
+				<td>3.5+</td>
+				<td>&nbsp;</td>
+				<td>5.0+</td>
+				<td>10.5+</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th>H.264+AAC+MP4</th>
+				<td>9.0+</td>
+				<td>&nbsp;</td>
+				<td>3.0+</td>
+				<td>5.0+</td>
+				<td>&nbsp;</td>
+				<td>3.0+</td>
+				<td>2.0+ </td>
+			</tr>
+			<tr>
+				<th>WebM</th>
+				<td>9.0+*</td>
+				<td>4.0+</td>
+				<td>&nbsp;</td>
+				<td>6.0+</td>
+				<td>10.6+</td>
+				<td>&nbsp;</td>
+				<td>2.3+ </td>
+			</tr>
+		</tbody>
+		</table>
+		<p>
+			&nbsp;
+		</p>
+	</body>
 
 </html>
