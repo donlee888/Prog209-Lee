@@ -38,7 +38,6 @@
 				text-align: center;
 				background-color: blue;
 				border: 10px dotted red;	/* NOTE that this border surrounds the frame area */
-			
 			}
 
 			#frame1 {
@@ -52,7 +51,8 @@
 				text-align: center;
 				background-color: purple;
 				border: 10px double orange;	/* NOTE that this border surrounds the frame area */
-.			}
+				.
+			}
 
 			#frame2 {
 				/*			position: absolute; */
@@ -65,7 +65,7 @@
 				text-align: center;
 				background-color: red;
 				border: 10px dashed green;	/* NOTE that this border surrounds the frame area */
-.
+				.
 			}
 
 			#frame3 {
@@ -96,12 +96,15 @@
 		<p>
 
 			<div id="frame0">
-				<h3>allegro.mp3</h3>
+				<h3>Mozart - El Rapto En El Serrallo</h3>
 				<audio controls="controls" loop="loop" poster="Images\Image500X500A.png">
 
-					<source src="HTML5 Video\allegro.mp3" type="audio/mp3" />
+					<source src="HTML5 Video\ElRaptoEnElSerrallo.ogg" type="audio/mp3" alt="Mozart - El Rapto En El Serrallo - OGG"/>
 
-					If you are reading this then your browser does not support the HTML5 audio element. Demo audio will play.
+					<!--					If you are reading this then your browser does not support the HTML5 audio element OGG. MP3 audio will play instead.
+					<source src="HTML5 Video\allegro.mp3" type="audio/mp3" alt="Mozart - El Rapto En El Serrallo - MP3"/>
+					</source>
+					!-->
 				</audio>
 				<br />
 				<br />
@@ -111,7 +114,7 @@
 
 			<div id="frame1">
 				<div id="videoDiv">
-					<h3>demoTest.mp4</h3>
+					<h3>Tom and Jerry Jolly Fish 1932</h3>
 					<video controls  width="430" height="300" poster="Images\Tom_and_Jerry_Jolly_Fish_1932.gif">
 						<source src="HTML5 Video\Tom_and_Jerry_Jolly_Fish_1932.ogv"  type="video/mp4" alt="Tom and Jerry Jolly Fish 1932">
 						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
@@ -128,9 +131,9 @@
 			<div id="videoDiv">
 				<h3>57SuperBowl.mp4</h3>
 				<video controls  width="430" height="300" poster="Images\Image500X500C.png">
-					<source src="HTML5 Video\57superbowl.mp4">
-												If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
-						<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+					<source src="HTML5 Video\57superbowl.mp4" alt="1957 SuperBowl">
+					If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+					<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
 
 				</video>
 			</div>
@@ -139,17 +142,17 @@
 		</p>
 		<h3>History of the Internet</h3>
 
-<!-- <div id=frame3></div> !-->
+		<!-- <div id=frame3></div> !-->
 
-<iframe src="https://player.vimeo.com/video/3061178" width="80%" height="300" style="display:block: border: double blue: auto: margin-right: auto;"></iframe></p>
-						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
-						<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
-<p></p>
+		<iframe src="https://player.vimeo.com/video/3061178" width="80%" height="300" style="display:block: border: double blue: auto: margin-right: auto;"></iframe></p>
+		If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+		<source src="HTML5 Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+		<p></p>
 
 		<p>
 		&nbsp;
 		</p>
-			<h3>Media Type and Browser Version Compatibility Table</h3>
+		<h3>Media Type and Browser Version Compatibility Table</h3>
 		<table width="607" height="224" border="1">
 		<thead>
 		<tr>
@@ -164,40 +167,40 @@
 		</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<th>Theora+Vorbis+Ogg</th>
-				<td>&nbsp;</td>
-				<td>3.5+</td>
-				<td>&nbsp;</td>
-				<td>5.0+</td>
-				<td>10.5+</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<th>H.264+AAC+MP4</th>
-				<td>9.0+</td>
-				<td>&nbsp;</td>
-				<td>3.0+</td>
-				<td>5.0+</td>
-				<td>&nbsp;</td>
-				<td>3.0+</td>
-				<td>2.0+ </td>
-			</tr>
-			<tr>
-				<th>WebM</th>
-				<td>9.0+*</td>
-				<td>4.0+</td>
-				<td>&nbsp;</td>
-				<td>6.0+</td>
-				<td>10.6+</td>
-				<td>&nbsp;</td>
-				<td>2.3+ </td>
-			</tr>
+		<tr>
+		<th>Theora+Vorbis+Ogg</th>
+		<td>&nbsp;</td>
+		<td>3.5+</td>
+		<td>&nbsp;</td>
+		<td>5.0+</td>
+		<td>10.5+</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+		<th>H.264+AAC+MP4</th>
+		<td>9.0+</td>
+		<td>&nbsp;</td>
+		<td>3.0+</td>
+		<td>5.0+</td>
+		<td>&nbsp;</td>
+		<td>3.0+</td>
+		<td>2.0+ </td>
+		</tr>
+		<tr>
+		<th>WebM</th>
+		<td>9.0+*</td>
+		<td>4.0+</td>
+		<td>&nbsp;</td>
+		<td>6.0+</td>
+		<td>10.6+</td>
+		<td>&nbsp;</td>
+		<td>2.3+ </td>
+		</tr>
 		</tbody>
 		</table>
 		<p>
-			&nbsp;
+		&nbsp;
 		</p>
 	</body>
 
