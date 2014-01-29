@@ -1,0 +1,56 @@
+body, h1 , div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#container {
+	width: 700px;
+	height: 600px;
+	background-color: #C8DDC9;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#header {
+	height: 60px;
+	background-color: #87B47E;
+}
+
+h1 {
+	font-size: 20px;
+	padding-top: 18px;
+	padding-left: 40px;
+}
+
+#gameCanvas {
+	width: 500px;
+	height: 500px;
+	background-image: url("../images/map.jpg");
+	float: left;
+}
+
+#menu {
+	width: 200px;
+	height: 500px;
+	background-color: #FDCEC6;
+	float: left;
+	text-align: center;
+}
+
+#sprite {
+	position: absolute;
+	top: 240px;
+	left: 200px;
+}
+
+#footer {
+	width: 700px;
+	height: 40px;
+	background-color: darkkhaki;
+	clear: both;
+	text-align: center;
+}

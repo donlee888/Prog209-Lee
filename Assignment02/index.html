@@ -17,118 +17,125 @@
 
 	</head>
 
-
-
 	<body>
 		<script src="src\index.js"></script>
-		
-		
+
 		<div id="container">
-					<h2><em>CSS Color Displayer</em></h2>
+			<h2><em>CSS Color Displayer</em></h2>
 
 			<h3><em>Select a number from 0 to 255 for each color value:</em></h3>
 
-	
-	  <div id="red">
-	  	<h2>Red:</h2>
-		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
-	 </div>
-	
-	  <div id="green">
-	  	<h2>Green:</h2>
-		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
-		
-	 </div>	
-	 
-	 <div id="blue">
-	 	<h2>Blue:</h2>
-		<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
+			<div class="red">
+				Red:
+				<input type="text" id="red" maxlength="3" size="5" value="0" align="right">
+			</div>
+			<div class="green">
+				Green:
+				<input type="text" id="green" maxlength="3" size="5" value="0">
+			</div>
+			<div class="blue">
+				Blue:
+				<input type="text" id="blue" maxlength="3" size="5" value="0">
+			</div>
 
-	 </div>
-	 
-	 <div>
-	 	<button id="show">Show me the color!</button>
-	 	
-		<button id="clear">Clear all</button>
-		
-		</div>
-		
-		<div id="colorBar"></div>
-		
-		
-			
+			<div>
+				<button id="show">
+					Show me the color!
+				</button>
+				<!--	 	<a id="show" onclick="document.getElementById('show').click();"></a> <a id="button-b" onclick="alert('something else');"></a>
+				!-->
+				<button id="clear">
+					Clear all
+				</button>
+
+			</div>
+
+			<div id="colorBar"></div>
+	
+			<!-- extra credit -->
+			<p id="hex">
+				Hexadecimal: #000000
+			</p>
 		</div>
 
-</body>
+		</div>
+	</body>
 </html>
+
+<!--
+<div id="red">
+<h2>Red:</h2>
+<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
+</div>
+
+<div id="green">
+<h2>Green:</h2>
+<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
+
+</div>
+
+<div id="blue">
+<h2>Blue:</h2>
+<input type="text" id="input" maxlength="3" size="5" value="0" align="right">
+!-->
 
 <!--		<div id="canvas"></div>
 
+<div id="Red">
+<form action="">
 
-			<div id="Red">
-				<form action="">
+<input id="input" type="text" placeholder="Enter some text...">
+<button>
+enter
+</button>
+<p id="output"></p>
 
-					<input id="input" type="text" placeholder="Enter some text...">
-					<button>
-						enter
-					</button>
-					<p id="output"></p>
+<br>
+</form>
 
-					<br>
-				</form>
+</div>
 
-			</div>
+<div id="Green">
 
-			<div id="Green">
+<form action="">
 
-				<form action="">
+<input name="red" type="number" name="Red">
+<input type="button">
+<br>
+</form>
 
-					<input name="red" type="number" name="Red">
-					<input type="button">
-					<br>
-				</form>
+</div>
 
-			</div>
+<div id="Blue">
+<form action="">
 
-			<div id="Blue">
-				<form action="">
+<input name="red" type="number" name="Red">
+<input type="submit" id="submit" value="Submit">
+<input type="reset" id="reset" value="Reset Fields"<br>
+<br>
+</form>
 
-					<input name="red" type="number" name="Red">
-					<input type="submit" id="submit" value="Submit">
-					<input type="reset" id="reset" value="Reset Fields"<br>
-					<br>
-					</form>
+</div>
 
-			</div>
+<div id="colorBar"></div>
 
+</section>
 
-			<div id="colorBar"></div>
+<div id="footer">
 
-		</section>
-
-		<div id="footer">
-	
-			<h3>Copyright © Donald Lee</h3>
-		</div>
+<h3>Copyright © Donald Lee</h3>
+</div>
 
 --!>
 
+<script>
+var button = document.querySelector("button");
+button.addEventListener("click", clickHandler, false);
+button.style.cursor = "pointer";
 
-	
+function clickHandler() {
 
-	<script>
-		var button = document.querySelector("button");
-		button.addEventListener("click", clickHandler, false);
-		button.style.cursor = "pointer";
+}
 
-		function clickHandler() {
-			var input = document.querySelector("#input");
-			var output = document.querySelector("#output");
-			output.innerHTML = input.value;
-		}
+</script>
 
-	</script>
-
-
-</body>
-</html>

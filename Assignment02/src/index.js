@@ -1,15 +1,20 @@
-var input = document.querySelector("#input");
+var red  = document.querySelector(".red");
+var green = document.querySelector(".green");
+var blue  = document.querySelector(".blue");
+
 var button = document.querySelector("#clicker");
 var showButton = document.querySelector("#show");
 var clearButton = document.querySelector("#clear");
+var colorBar = document.querySelector("#colorBar");
 var hideButton = document.querySelector("#hide");
+var input = document.querySelector("#input");
 
-colorBar.style.backgroundColor = "red";
-showButton.addEventListener("click", showDiv, false);
-hideButton.addEventListener("click", hideDiv, false);
+
+
+colorBar.style.backgroundColor = "OldLace";
 showButton.addEventListener("click", showColorHandler, false);
 clearButton.addEventListener("click", clearColorHandler, false);
-button.addEventListener("click", clickHandler, false);
+
 
 function showDiv(e) {
 	colorBar.style.display = "block";
@@ -19,16 +24,8 @@ function hideDiv(e) {
 	colorBar.style.display = "none";
 }
 
-function showColorHandler(e) {
-	var r = parseInt("55");
-	var g = parseInt("11");
-	var b = parseInt("99");
-
-	colorBar.style.backgroundColor  = "rgb(" + r + "," + g + "," + b + ")";			
-}
-
-function clickHandler(e) {
-	var n = parseInt(input.value);
+function clickColorHandler(e) {
+	var n = (input.value);
 
 	// validate the input value
 	if (validate(n)) {
@@ -38,32 +35,57 @@ function clickHandler(e) {
 	}
 }
 
+function showColorHandler(e) {
+	var r = parseInt(red.value);
+	var g = parseInt(green.value);
+	var b = parseInt(blue.value);
+
+	if ( validate(r) && validate(g) && validate(b) ){
+		colorBar.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+		// extra credit		
+		hex.innerHTML = "Hexadecimal: #" + convert(r) + convert(g) + convert(b);
+	}
+	else {
+		alert("You must enter a number from 0 to 255!");
+		clear();
+	}
+}
+     
+
+function clearColorHandler(e) {
+	clear();
+}
+
+function validate(color) {
+	if ( isNaN(color) || color < 0 || color > 255)  {
+		return false;
+	}
+	return true;
+}
+
+// convert num to hex string
+function convert(num) {
+	var hexVal = num.toString(16);
+	return num<16 ? "0" + hexVal : hexVal;
+}
+
+// reset dom objects                                                                                                                                                                                                                                               
+function clear() {
+	red.value = 0;
+	green.value = 0;
+	blue.value = 0;
+	colorBar.style.backgroundColor = "OldLace";
+	hex.innerHTML = "Hexadecimal: #000000";
+}
+ 
+ 
+/*
 function validate(n) {
 	if (n < 1 || n > 255) {
 		return false;
 	} else {
 		return true;
 	}
-}
-
-
-
-function showColorHandler(e) {
-	var r = parseInt("55");
-	var g = parseInt("11");
-	var b = parseInt("99");
-
-	colorBar.style.backgroundColor  = "rgb(" + r + "," + g + "," + b + ")";			
-}
-
-
-
-function showColorHandler(e) {
-	var r = parseInt("55");
-	var g = parseInt("11");
-	var b = parseInt("99");
-
-	colorBar.style.backgroundColor  = "rgb(" + r + "," + g + "," + b + ")";			
 }
 
 function clearColorHandler(e) {
@@ -73,8 +95,6 @@ function clearColorHandler(e) {
 function clear() {
 	colorBar.style.backgroundColor = "OldLace";
 }
-
-
 
 <div id="hex">HEX: <input type="text"></input></div>
 <div id="rgb">RGB: <input type="text"></input></div>
@@ -89,7 +109,7 @@ function clear() {
 	$(img).load(function(){
 	  colorBar.drawImage(img,0,0);
 	});
-
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 	// http://www.javascripter.net/faq/rgbtohex.htm
 	function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
 	function toHex(n) {
