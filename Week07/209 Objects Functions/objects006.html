@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object and Functions Examples</title>
+</head>
+
+<body>
+
+
+<script>
+
+//Creating methods with objects
+
+var robot={
+	
+	matrial:"titanium",
+	happy:true,
+	
+	makeBreakfast:function(choice){             // function within object
+
+alert("here is your " +	choice +" master")
+	}
+	
+}
+
+var breakfast=prompt("enter what you want for breakfast");
+robot.makeBreakfast(breakfast)
+
+var robot2 = Object.create(robot);
+robot2.makeBreakfast(breakfast);
+
+
+// car object
+
+/*
+var car={
+	
+	model: "Tesla",
+	drive:true,
+	getSpeed:function(speed),
+	getGear:function(gear){             // function within object
+}
+
+alert("Your " model + "'s gear box is set at " + gear + "and your speed is at " + speed);
+	
+
+var gear = prompt("Enter your driving speed");
+robot.makeBreakfast(breakfast)
+
+var car2 = Object.create(car);
+car2.getSpeed(speed);
+car2.getGear(gear);
+
+*/
+
+</script>
+</body>
+</html>

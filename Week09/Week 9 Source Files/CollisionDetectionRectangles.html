@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Collision Detection Rectangles</title>
+	<style>
+		#canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500"  height="500"></canvas>
+<script>
+	// Get context
+	//
+	var canvas = document.querySelector("canvas"); 
+	var ctx = canvas.getContext("2d");
+
+	var rect = {
+		x: 100,
+		y: 100,
+		width: 50,
+		height: 50,
+		vx: 4,
+		vy: 4,
+		centerX: function() { return this.x + this.width/2; },
+		centerY: function() { return this.y + this.height/2; },
+		halfWidth: function() { return this.width/2; },
+		halfHeight: function() { return this.height/2; },
+		color: "red"
+
+	};
+
+	var sprites = [ ];
+
+	var rect1 = Object.create(rect);
+	rect1.x = 100;
+	rect1.y = 100;
+	rect1.vy = 2;
+	sprites.push(rect1);
+
+	var rect2 = Object.create(rect);
+	rect2.vx = -2;
+	rect.x = 300;
+	rect.y = 300;
+	rect2.color = "blue";
+	sprites.push(rect2);
+
+	animationLoop();
+
+	function animationLoop() {
+		requestAnimationFrame( animationLoop, canvas);
+
+		// update canvas state
+		//
+		for (var i=0; i<sprites.length; i++ ) {
+			boundaryTest ( sprites[i] );
+		}
+
+		if ( hitTestRectangle( sprites[0], sprites[1] ) ) {
+			sprites[0].vx *= -1;
+			sprites[0].vy *= -1;
+			sprites[1].vx *= -1;
+			sprites[1].vy *= -1;
+		}
+
+		render( );
+	}
+
+	function boundaryTest ( rect ) {
+		if (rect.x + rect.width > canvas.width) {
+			rect.x = canvas.width - rect.width;
+			rect.vx *= -1;
+		}
+		if (rect.y + rect.height > canvas.height) {
+			rect.y = canvas.height - rect.height;
+			rect.vy *= -1;
+		}
+		if (rect.x < 0) {
+			rect.x = 0;
+			rect.vx *= -1;
+		}
+		if (rect.y  < 0) {
+			rect.y = 0;
+			rect.vy *= -1;
+		}
+
+		rect.x += rect.vx;
+		rect.y += rect.vy;
+	}
+
+	function hitTestRectangle( r1, r2 ) {
+		// Return TRUE if there's a collision on both the X and Y axis
+		return Math.abs(r1.centerX() - r2.centerX() ) < r1.halfWidth() + r2.halfWidth() &&
+			   Math.abs( r1.centerY() - r2.centerY() ) < r1.halfHeight() + r2.halfHeight();
+	}
+
+	function render( ) {
+
+		ctx.clearRect( 0, 0, canvas.width, canvas.height);
+
+		for (var i = 0; i<sprites.length; i++ ) {
+			var curRect = sprites[i];
+			ctx.fillStyle = curRect.color;
+			ctx.fillRect( curRect.x, curRect.y, curRect.width, curRect.height );
+		}
+
+	}
+
+
+</script>
+</body>
+</html>

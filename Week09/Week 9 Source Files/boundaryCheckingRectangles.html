@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Boundary Checking Rectangles</title>
+	<style>
+		#canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500"  height="500"></canvas>
+<script>
+	// Get context
+	//
+	var canvas = document.querySelector("canvas"); 
+	var ctx = canvas.getContext("2d");
+
+	var rect = {
+		x: canvas.width/2,
+		y: canvas.height/3,
+		w: 50,
+		h: 50,
+		vx: 4,
+		vy: 4,
+		color: "red"
+	};
+
+	animationLoop();
+
+	function animationLoop() {
+		requestAnimationFrame( animationLoop, canvas);
+
+		// update canvas state
+		//
+		if (rect.x + rect.w > canvas.width) {
+			rect.x = canvas.width - rect.w;
+			rect.vx *= -1;
+		}
+		if (rect.y + rect.h > canvas.height) {
+			rect.y = canvas.height - rect.h;
+			rect.vy *= -1;
+		}
+		if (rect.x < 0) {
+			rect.x = 0;
+			rect.vx *= -1;
+		}
+		if (rect.y  < 0) {
+			rect.y = 0;
+			rect.vy *= -1;
+		}
+
+		rect.x += rect.vx;
+		rect.y += rect.vy;
+
+		render( );
+	}
+
+	function render( ) {
+
+		ctx.clearRect( 0, 0, canvas.width, canvas.height);
+
+		ctx.fillStyle = rect.color;
+		ctx.fillRect( rect.x, rect.y, rect.w, rect.h );
+
+	}
+
+
+</script>
+</body>
+</html>

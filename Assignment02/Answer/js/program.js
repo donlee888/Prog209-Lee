@@ -3,8 +3,8 @@ var red  = document.querySelector("#red");
 var green = document.querySelector("#green");
 var blue  = document.querySelector("#blue");
 
-var showButton = document.querySelector("#show");
-var clearButton = document.querySelector("#clear");
+var showButton = document.querySelector("#showButton");
+var clearButton = document.querySelector("#clearButton");
 
 var colorBar = document.querySelector("#colorBar");
 

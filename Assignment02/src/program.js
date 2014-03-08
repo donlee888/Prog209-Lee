@@ -1,17 +1,16 @@
-// initialize variables and set up listeners
+
 var red  = document.querySelector("#red");
 var green = document.querySelector("#green");
 var blue  = document.querySelector("#blue");
 
-var showButton = document.querySelector("#show");
-var clearButton = document.querySelector("#clear");
+var showButton = document.querySelector("#showButton");
+var clearButton = document.querySelector("#clearButton");
 
 var colorBar = document.querySelector("#colorBar");
 
 showButton.addEventListener("click", showColorHandler, false);
 clearButton.addEventListener("click", clearColorHandler, false);
 
-// render  display
 function showColorHandler(e) {
 	var r = parseInt(red.value);
 	var g = parseInt(green.value);
@@ -23,7 +22,7 @@ function showColorHandler(e) {
 		hex.innerHTML = "Hexadecimal: #" + convert(r) + convert(g) + convert(b);
 	}
 	else {
-		alert("You must enter a number from 0 to 255!");
+		alert("Invalid Input! Please enter a number between 0 to 255!");
 		clear();
 	}
 }
@@ -39,13 +38,11 @@ function validate(color) {
 	return true;
 }
 
-// convert num to hex string
 function convert(num) {
 	var hexVal = num.toString(16);
 	return num<16 ? "0" + hexVal : hexVal;
 }
 
-// reset dom objects
 function clear() {
 	red.value = 0;
 	green.value = 0;

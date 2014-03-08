@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 6: Drawing on HTML Canvas</title>
+	<style>
+		#canvas {
+			margin-top: 20px;
+			margin-left: 20px;
+			border: 1px solid gray;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500">
+	<!-- Insert fallback content here -->
+</canvas>
+<script>
+var canvas = document.querySelector("#canvas");
+var ctx = canvas.getContext("2d");
+
+function rad(deg) { 
+	// Function to convert degrees to radians
+	return Math.PI/180 * deg;
+}
+
+// First step: calculate center of sign since
+// everything will be relative to this center point
+//
+cx = canvas.width/2;
+cy = canvas.height/2 + 40;
+
+// Setup default drawing properties for our sign			
+ctx.lineWidth = 40;				
+ctx.lineJoin = "round";
+ctx.fillStyle = "yellow";
+
+// Draw outer sign triangle 
+// Note: I calculated the corners relative to the 
+// center of sign and adjusted by trial and error
+//
+ctx.beginPath();
+ctx.moveTo(cx, cy-215); 
+ctx.lineTo(cx-200, cy+112);
+ctx.lineTo(cx+200, cy+112);
+ctx.closePath();
+ctx.stroke();
+ctx.fill(); 
+
+// Draw large black circle fill
+//
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.arc(cx, cy, 100, 0, rad(360), false);
+ctx.fill();
+
+// Draw the 3 alternating yellow slices as line paths:
+// Divide the circle into 6 slices so each
+// slice is 60 degrees alternating yellow and black. 
+// Thus, each yellow slice is 120 degrees from the next 
+// with 0, 120, 240 as the starting angle for each yellow slice.
+// Adjust the line width and radius as necessary.   
+//
+ctx.strokeStyle = "yellow";
+ctx.lineWidth = 95;
+for (var i=0; i<=240; i+=120) {
+	ctx.beginPath();
+	ctx.arc(cx, cy, 70, rad(i), rad(i+60), false);
+	ctx.stroke();
+}
+
+// Draw the inner yellow circle path
+//
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(cx, cy, 25, 0, rad(360), false);
+ctx.stroke();
+
+</script>
+</body>
+</html>

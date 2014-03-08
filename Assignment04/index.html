@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Adventure</title>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body lang="en-us" class="theme">
+
+    <header class="gameTitle">
+        Theseus and the Minotaur
+    </header>
+
+    <header class="statusBar">
+        <div id="placeLabel">Knossos palace ampitheater</div>
+        <div id="scoreLabel">0%</div>
+    </header>
+
+    <div id="outputDiv">
+        <span class="inlineRoom">
+            <b>Theseus and the Minotaur - The Text Adventure</b><br/>© 2013 Pennock Projects
+        </span>
+        <br/><br/>
+    </div>
+    <div class="inputDiv">
+        <div id="caret">&gt;&nbsp;</div>
+        <textarea cols="80" rows="1" id="textIn" wrap="hard" onkeypress="if(event.keyCode==13 &amp;&amp; this.value!=''){world.processCommand(this.value);this.value='';}"></textarea>
+    </div>
+
+    <footer>
+		<p>&copy; Copyright <a href="http://www.">Donald Lee</a>, 2014</p>
+    </footer>
+    
+    <script src="TxtAdventure.js" type="text/javascript"></script>
+
+</body>
+</html>

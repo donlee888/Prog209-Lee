@@ -1,0 +1,298 @@
+
+/* Prog 209 Assignment 02 by Donald Lee */
+
+
+<!doctype html>
+
+/* Black: #000000
+ White: #FFFFFF
+ Red: #FF0000
+ Blue: #0000FF
+ Green: #00FF00
+ Yellow: #FFFF00
+ Orange: #FF9900
+ Violet: #CC33FF
+
+ Hex colors are not the only color system you can use. You can optionally use the RGB/RGBA or HSL/HSLA color systems. They all produce the same colors, but they describe them in different ways.
+ The RGB system uses three numbers that describe the relative amounts of red, green, and blue that are mixed together to produce any color. The numbers can be from 0 to 255. Here's the RGB color code for a dark violet: rgb(204, 51, 255)
+ You could apply this to a CSS property, like a font color, like this:
+
+ color: rgb(205, 51, 255);
+ The RGBA system adds one more number that describes how transparent a color is. 0 means that the color is completely transparent, and 1 means that it's completely opaque (solid). A value of 0.5 makes the color semitransparent. Here's a semitransparent RGBA version of dark violet.
+
+ rgba(204, 51, 255, 0.5)
+
+ */
+
+<title>Background images</title>
+
+<
+style > * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+#container {
+	margin: 25px auto;
+	background-color: OldLace;
+	border: 1px solid Silver;
+	width: 950px;
+	height: 600px;
+	padding: 10px 30px;
+}
+
+button {
+	margin-left: 10px;
+}
+
+input {
+	margin: 20px 0;
+	text-align: right;
+}
+
+section {
+	border: 1px solid black;
+	margin: 10px width : 500px;
+	height: 500px;
+}
+
+#canvas {
+	display: block;
+	border: 1px solid black;
+	width: 800px;
+	height: 800px;
+	background-color: #FFFFFF;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#header {
+	width: 700px;
+	height: 60px;
+	background-color: #87B47E;
+	clear: both;
+	text-align: center;
+}
+
+#colorBar {
+	margin: 20px
+	border: 1px solid Black;
+	width: 500px;
+	height: 25px;
+	background-color: Silver;
+	position: absolute;
+	padding: 100px;
+	top: 400px;
+	float: left;
+}
+
+.colorBox {
+	width: 80px;
+	height: 60px;
+	border: 1px solid LightGray;
+	float: left;
+	margin-right: 15px;
+	text-align: center;
+}
+
+#show {
+	margin: 0 20px 20px;
+	float: left;
+	/*   position: absolute; */
+	top: 200px;
+	left: 900px;
+}
+
+#clear {
+	margin: 0 20px 20px;
+	float: left;
+	/*  position: absolute; */
+	top: 250px;
+	left: 900px;
+}
+
+#hex {
+	border: 1px solid black;
+	margin: 0 20px 20px;
+	float: left;
+	/*  position: absolute; */
+	top: 400px;
+	left: 900px;
+}
+button {
+	margin-bottom: 10px;
+}
+
+input {
+	text-align: right;
+}
+
+.redBox {
+	display: block;
+	border: 1px solid black;
+	margin: 0 20px 20px;
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+	float: left;
+	text-align: center;
+	background-color: red;
+	/*	position: absolute;
+	 top: 300px;
+	 left: 250px;
+	 */
+	border: 1px solid black;
+}
+
+.greenBox {
+	display: block;
+	border: 1px solid black;
+	margin: 0 20px 20px;
+	height: 150px;
+	width: 150px;
+	top: 300px;
+	padding: 20px;
+	float: left;
+	text-align: center;
+	background-color: green;
+	/*	position: absolute;
+	 top: 300px;
+	 n	left: 400px;
+	 */
+	border: 1px solid black;
+}
+
+.blueBox {
+	display: block;
+	border: 1px solid black;
+	margin: 0 20px 20px;
+	height: 150px;
+	width: 150px;
+	top: 300px;
+	padding: 20px;
+	float: left;
+	text-align: center;
+	background-color: blue;
+	/*	position: absolute;
+	 top: 300px;
+	 left: 400px;
+	 */
+	border: 1px solid black;
+}
+
+#footer {
+	clear: both;
+	border-top: 2px solid #ef9c00;
+}
+
+h1 {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+h2 {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 25px;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+h3 {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 15px;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+
+p, li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+em {
+	text-decoration: bold;
+	font-style: normal;
+}
+
+strong {
+	font-weight: bold;
+	color: red;
+}
+
+li {
+	list-style-type: square;
+}
+
+a {
+	color: green;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: black;
+	color: white;
+}
+
+/* img
+ {
+ width: 250px;
+ height: auto;
+ border-style: dashed;
+ border-width: 2px;
+ border-color: navy;
+ padding: 10px;
+ }
+
+ */
+
+/* button {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ color: #fff;
+ padding: 10px 20px;
+ border: 2px solid #000;
+ cursor: pointer;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ background: -webkit-linear-gradient(top, #a3a3a3, #000);
+ background: -moz-linear-gradient(top, #a3a3a3, #000);
+ background: linear-gradient(top, #a3a3a3, #000);
+ -webkit-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+ -moz-box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+ box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ user-select: none;
+ }
+
+ button:hover {
+ background: -webkit-linear-gradient(top, #acc7a3, #506651);
+ background: -moz-linear-gradient(top, #acc7a3, #506651);
+ background: linear-gradient(top, #acc7a3, #506651);
+ }
+
+ button:active {
+ background: -webkit-linear-gradient(top, #858565, #c5c9a9);
+ background: -moz-linear-gradient(top, #858565, #c5c9a9);
+ background: linear-gradient(top, #858565, #c5c9a9);
+ }
+
+ body, h1, div {
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: "Lucida Console", Monaco, monospace;
+ font-size: 15px;
+ }
+
+ */

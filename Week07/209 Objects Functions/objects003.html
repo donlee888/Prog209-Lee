@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object and Functions Examples</title>
+</head>
+
+<body>
+
+
+<script>
+
+//Unlike arrays it is not possible to read the contents of an object using a numberic index
+//The only type of index that can be used is a named one. Example:
+
+var obj={};
+
+obj.firstName="Hugo";
+
+obj[0]; //returns undefined
+alert(obj["firstName"]); //Returns Hugo
+
+//Nesting Objects
+
+var person;
+person={};
+person.name={};  //creating an object inside and object
+
+person.name.first="Louie";
+person.name.last="Armstrong";
+
+alert(person.name.last);
+
+//Be careful when nesting objects as you need to obviously create them before nesting them.
+
+</script>
+</body>
+</html>

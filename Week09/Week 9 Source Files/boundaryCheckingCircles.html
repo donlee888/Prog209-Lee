@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Boundary Checking Circles</title>
+	<style>
+		#canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500"  height="500"></canvas>
+<script>
+	// Get context
+	//
+	var canvas = document.querySelector("canvas"); 
+	var ctx = canvas.getContext("2d");
+
+	var circle = {
+		x: canvas.width/3,
+		y: canvas.height/2,
+		r: 25,
+		vx: 0,
+		vy: 4
+	};
+
+	animationLoop();
+
+	function animationLoop() {
+		requestAnimationFrame( animationLoop, canvas);
+
+		// update canvas state
+		//
+		if (circle.x + circle.r > canvas.width) {
+			circle.x = canvas.width - circle.r;
+			circle.vx *= -1;
+		}
+		if (circle.y + circle.r > canvas.height) {
+			circle.y = canvas.height - circle.r;
+			circle.vy *= -1;
+		}
+		if (circle.x - circle.r < 0) {
+			circle.x = circle.r;
+			circle.vx *= -1;
+		}
+		if (circle.y - circle.r < 0) {
+			circle.y = circle.r;
+			circle.vy *= -1;
+		}
+
+		circle.x += circle.vx;
+		circle.y += circle.vy;
+
+		render( );
+	}
+
+	function render( ) {
+
+		ctx.clearRect( 0, 0, canvas.width, canvas.height);
+
+		ctx.beginPath();
+		ctx.fillStyle = "red";
+		ctx.arc( circle.x, circle.y, circle.r, 0, Math.PI*2 );
+		ctx.fill();
+	}
+
+
+</script>
+</body>
+</html>

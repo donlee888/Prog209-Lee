@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title>HTML 5.0 Video and webRTC (Real Time Communication) Video Conferencing Demo.</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="Images/DonProfile.jpg">
+
+		<!-- Latest compiled and minified CSS -->
+
+		<link href="Style/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Optional theme -->
+
+		<link href="Style/bootstrap-theme.min.css" rel="stylesheet">
+
+		<link href="Style/index.css" rel="stylesheet" type="text/css" />
+
+		<!-- Latest compiled and minified JavaScript - Move to bottom of body element -->
+
+		<script src="Source/jquery.js"></script>
+
+		<script src="Source/bootstrap.min.js"></script>
+
+		<script src="Source/index.js"></script>
+
+
+		<style type="text/css">
+			background {
+				color: #000;
+			}
+
+			body {
+				margin: 50px;
+				font-family: Verdana, Helvetica, sans-serif;
+				background: #fff;
+				color: #000;
+			}
+
+			#frame0 {
+				/*				position: absolute; */
+				float: top;
+				top: 100px;
+				left: 100px;
+				width: 450px;
+				height: 100px;
+				margin: 50px;
+				text-align: center;
+				background-color: blue;
+				border: 10px dotted red;	/* NOTE that this border surrounds the frame area */
+			}
+
+			#frame1 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 600px;
+				left: 100px;
+				width: 450px;
+				height: 400px;
+				margin: 50px;
+				text-align: center;
+				background-color: purple;
+				border: 10px double orange;	/* NOTE that this border surrounds the frame area */
+				.
+			}
+
+			#frame2 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 1000px;
+				left: 10px;
+				width: 450px;
+				height: 400px;
+				margin: 50px;
+				text-align: center;
+				background-color: red;
+				border: 10px dashed green;	/* NOTE that this border surrounds the frame area */
+				.
+			}
+
+			#frame3 {
+				/*			position: absolute; */
+				float: bottom;
+				top: 1000px;
+				left: 10px;
+				width: 450px;
+				height: 330px;
+				margin: 50px;
+				text-align: center;
+				border: 10px double blue;	/* NOTE that this border surrounds the frame area */
+				background-color: gray;
+			}
+
+		</style>
+
+		
+
+	</head>
+
+	<body>		
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+
+			<div class="container">
+
+				<div class="navbar-header">
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+						<span class="icon-bar"> </span>
+
+						<span class="icon-bar"> </span>
+
+						<span class="icon-bar"> </span>
+
+					</button>
+
+					<a class="navbar-brand" href="index.html">HTML 5.0 Video and webRTC (Real Time Communication) Video Conferencing Demo.</a>
+
+				</div>
+			
+				<div class="collapse navbar-collapse">
+
+					<ul class="nav navbar-nav">
+
+					<li><a href="index.html">Home</a></li>
+
+					<li><a href="Pictures.html">Pictures</a></li>
+					
+					<li class='active'><a href="video.html">Video and webRTC</a></li>
+
+					<li><a href="https://s3.amazonaws.com/prog270.donlee.com/week08/index.html">MongoDB Guest Book</a></li>				 				 
+
+					<li><a href="About.html">About</a></li>
+
+
+					<li class="dropdown">
+
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+					  <ul class="dropdown-menu">
+
+						<li><a href="index.html">Home</a></li>
+
+						<li><a href="Pictures.html">Pictures</a></li>
+
+						<li class='active'><a href="video.html">Video and webRTC</a></li>
+
+						<li><a href="https://s3.amazonaws.com/prog270.donlee.com/week08/index.html">MongoDB Guest Book</a></li>				 				 
+
+						<li><a href="About.html">About</a></li>			 
+
+					    
+					  </ul>
+
+					</li>
+
+				  </ul>
+
+				</div><!--/.nav-collapse -->
+
+			</div>
+
+		</div>
+
+		
+
+
+
+		<div class="container">
+
+           <div id='drawHere01' class='draw-target'></div>
+		
+	      
+			
+
+ <!-- START THE FEATURETTES -->
+
+
+		<!-- <audio controls="controls" autoplay="autoplay" loop> !-->
+
+		<h2>HTML 5.0 Embedded Music, Video & webRTC (Real-Time-Communciation) Browser-To-Browser Video Conferencing Demo.  (Scroll down the page and press "Play" button)</h2>
+		<p>
+		
+		
+				<div id="frame00">
+				<h4><a href="https://dublin.cloudators.com/demos/demo_multiparty.html">Click here for <bold>easyRTC</bold>webRTC (Real-Time-Communciation) Browser-To-Browser Multi-Party Video Conferencing</a></h3>
+<p>
+				<h4><a href="https://appear.in/claudio">Click here for <bold>APPEAR.IN</bold> webRTC (Real-Time-Communciation) Browser-To-Browser Multi-Party Video Conferencing</a></h3>
+			<p>
+			</div>	
+
+					<h3>History of the Internet</h3>
+
+		<!-- <div id=frame3></div> !-->
+
+		<iframe src="https://player.vimeo.com/video/3061178" width="80%" height="300" style="display:block: border: double blue: auto: margin-right: auto;"></iframe></p>
+		<source src="HTML5Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+		<p></p>
+
+			<div id="frame0">
+				<h3>Mozart - El Rapto En El Serrallo - OGG</h3>
+				<audio controls="controls" loop="loop" poster="Images\Image500X500A.png">
+
+					<source src="HTML5Video\ElRaptoEnElSerrallo.ogg" type="audio/mp3" alt="Mozart - El Rapto En El Serrallo - OGG"/>
+						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+
+					<!--					If you are reading this then your browser does not support the HTML5 audio element OGG. MP3 audio will play instead.
+					<source src="HTML5Video\allegro.mp3" type="audio/mp3" alt="Mozart - El Rapto En El Serrallo - MP3"/>
+					</source>
+					!-->
+				</audio>
+				<br />
+				<br />
+			</div>
+
+			<!-- <video controls autoplay> </video> !-->
+
+			<p>
+
+		<div id="frame2">
+			<div id="videoDiv">
+				<h3>57 SuperBowl - MP4</h3>
+				<video controls  width="430" height="300" poster="Images\Image500X500C.png">
+					<source src="HTML5Video\57superbowl.mp4" alt="1957 SuperBowl">
+											If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+					<source src="HTML5Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+					<source src="Images\Image500X500C.png"/>
+				</video>
+			</div>
+		</div>
+		<p><p></p>
+		</p>
+
+		
+			<div id="frame1">
+				<div id="videoDiv">
+					<h3>Tom and Jerry Jolly Fish 1932 - OGG</h3>
+					<video controls  width="430" height="300" poster="Images\Tom_and_Jerry_Jolly_Fish_1932.gif">
+						<source src="HTML5Video\Tom_and_Jerry_Jolly_Fish_1932.ogv"  type="video/mp4" alt="Tom and Jerry Jolly Fish 1932">
+						If you are reading this then your browser does not support the HTML5 audio element. Demo video will play.
+						<source src="HTML5Video\demoTest.mp4"  type="video/mp4" alt="demoTest.mp4">
+						<source src="Images\Tom_and_Jerry_Jolly_Fish_1932.gif"/>
+					</video>
+				</div>
+			</div>
+
+		<p></p>
+		<p></p>
+		
+		<p>
+		&nbsp;
+		</p>
+		<h3>Media Type and Browser Version Compatibility Table</h3>
+		<table width="607" height="224" border="1">
+		<thead>
+		<tr>
+		<th bgcolor="#FFCC66">Codecs/container</th>
+		<th bgcolor="#FFCC66" title="Internet Explorer">IE</th>
+		<th bgcolor="#FFCC66" title="Mozilla Firefox">Firefox</th>
+		<th bgcolor="#FFCC66" title="Apple Safari">Safari</th>
+		<th bgcolor="#FFCC66" title="Google Chrome">Chrome</th>
+		<th bgcolor="#FFCC66">Opera</th>
+		<th bgcolor="#FFCC66">iPhone</th>
+		<th bgcolor="#FFCC66">Android </th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<th>Theora+Vorbis+Ogg</th>
+		<td>&nbsp;</td>
+		<td>3.5+</td>
+		<td>&nbsp;</td>
+		<td>5.0+</td>
+		<td>10.5+</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+		<th>H.264+AAC+MP4</th>
+		<td>9.0+</td>
+		<td>&nbsp;</td>
+		<td>3.0+</td>
+		<td>5.0+</td>
+		<td>&nbsp;</td>
+		<td>3.0+</td>
+		<td>2.0+ </td>
+		</tr>
+		<tr>
+		<th>WebM</th>
+		<td>9.0+*</td>
+		<td>4.0+</td>
+		<td>&nbsp;</td>
+		<td>6.0+</td>
+		<td>10.6+</td>
+		<td>&nbsp;</td>
+		<td>2.3+ </td>
+		</tr>
+		</tbody>
+		</table>
+		<p>
+		&nbsp;
+		</p>
+
+      
+
+      
+    
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+
+
+
+		</div><!-- /.container -->
+
+
+
+	</body>
+
+</html>
+
