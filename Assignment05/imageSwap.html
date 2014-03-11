@@ -1,0 +1,75 @@
+<!-- authored by Donald Lee for Prog 209 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 5 - Cars Movie Characters Image Swap</title>
+    <link rel="stylesheet" href="css/imageSwap.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready( function() {
+
+            // Preload images
+            
+            $("#image_list a").each( function() {
+                var swappedImage = new Image();
+                swappedImage.src = $(this).attr("href");
+            });
+
+            // Set up event handler for clicking on thumb
+     
+            $("#image_list a").click( function(evt) {
+
+                // Swap Images
+                //
+                var imageURL = $(this).attr("href");
+                $("#image").attr("src", imageURL);
+
+                // Swap Captions
+                //
+                var caption = $(this).attr("title");
+                $("#caption").text(caption);
+
+                // Swap Thumbnail Borders
+                
+                $(".frame").removeClass("frame");
+                $(this).find("img").addClass("frame");
+
+                // Cancel the default action of the link (i.e., don't link!)
+                //
+                evt.preventDefault();   // jQuery cross-browser method
+            });   // End click
+        }); // End ready
+    </script>
+</head>
+<body>
+    <section>
+    	<div>
+        <h1>Characters from the <bold>Cars</bold> Movie</h1>
+        <ul id="image_list">
+        	<div>
+            <li><a href="images/cars1.jpg" title="Lightning McQueen">
+                <img src="images/cars1_thumbnail.jpg" class="frame" alt="Lightning McQueen_thumbnail"></a></li>
+            <li><a href="images/cars2.jpg" title="Sally">
+                <img src="images/cars2_thumbnail.jpg" class="frame" alt="Sally_thumbnail"></a></li>
+            <li><a href="images/cars3.jpg" title="Mater">
+                <img src="images/cars3_thumbnail.jpg" class="frame" alt="Mater_thumbnail"></a></li>
+            <li><a href="images/cars4.jpg" title="The King">
+                <img src="images/cars4_thumbnail.jpg" class="frame" class="frame" alt="Cars4_thumbnail"></a></li>
+            <li><a href="images/cars5.jpg" title="Ramone">
+                <img src="images/cars5_thumbnail.jpg" class="frame" alt="Cars5_thumbnail"></a></li>
+            <li><a href="images/cars6.jpg" title="Flo">
+                <img src="images/cars6_thumbnail.jpg" class="frame" alt="Cars6_thumbnail"></a></li> 
+            <li><a href="images/cars7.jpg" title="Neatorama">
+                <img src="images/cars7_thumbnail.jpg" class="frame" alt="Cars7_thumbnail"></a></li>                
+            <li><a href="images/cars8.jpg" title="Chick Hicks">
+                <img src="images/cars8_thumbnail.jpg" class="frame" alt="Cars8_thumbnail"></a></li>                
+             </div>   
+        </ul>
+        <h2 id="caption">Lightning McQueen</h2>
+        <p><img align="center" src="images/cars1.jpg" alt="Cars1" id="image"></p>
+        </div>
+    </section>
+</body>
+</html>
