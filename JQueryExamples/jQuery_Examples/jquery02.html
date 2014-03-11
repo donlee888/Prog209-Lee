@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery Test</title>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js">
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+						   {
+		$('p#para1').hide();
+		$('img').hide();
+		$('a#paragraphAnchor').click(function()
+											  {
+												$('p#para1').slideDown(900);  
+												$('img').slideDown(1000);
+											  })	
+		$('a#paragraphAnchor2').click(function()
+											  {
+												  $('p#para1').slideUp(900); 
+												    $('img').slideUp(900); 
+												  
+											  })
+		
+							   
+						   })
+						   
+</script>
+
+
+<script type="text/javascript">
+function changeBG(){
+$('#para2').toggleClass('striped');
+
+}
+</script>
+
+<style>
+p.striped{background-color:#09F;}
+</style>
+
+</head>
+
+<body>
+
+<a href="#" id="paragraphAnchor">Click to read paragraph</a> <br />
+<a href="#" id="paragraphAnchor2">Click to hide paragraph</a>
+<p id="para1">
+this is meaningless data dfjadkjf djfa jdfjdfa jdkf djafjkdl;f jdkalfjdlkjf adsf
+
+</p>
+
+<p id="para2">
+this is meaningless data for paragraph 2 here it is....more stuff....dfdfajlkdjf kdajfkdsjf dalkjfd;slfjk 
+
+</p>
+
+<img src="cow.jpg" width="300" height="225" alt="cow" />
+<br />
+
+<form>
+  
+  <input type="button" value="Stripe" onclick="changeBG()" />
+  
+</form>
+
+</body>
+</html>

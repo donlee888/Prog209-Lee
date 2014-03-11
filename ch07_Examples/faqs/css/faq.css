@@ -1,0 +1,50 @@
+/* reset */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+section {
+	max-width: 760px;
+	margin: 20px 0 0 100px;
+	border: #a0a0a0 solid 1px;
+	padding: 20px;
+	background-color: OldLace;
+}
+h1 {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: bold;
+	background: url("../images/plus.png") no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+.minus {
+	font-weight: bold;
+	background-image: url("../images/minus.png");
+}
+div {
+	margin-left: 25px;
+	display: none;
+}
+ul {
+	margin-left: 20px;
+}
